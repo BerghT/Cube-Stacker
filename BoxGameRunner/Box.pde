@@ -8,9 +8,11 @@ public class Box {
     background(51);
     rect(a, b, 50, 50);  
     a = a + 10;
+    //Moves box back to beginning when it reaches end of screen
     if (a==950) {
       a=0;
-    }
+    } 
+    //Does something
     if (a < 0) { 
       a = height;
     }
@@ -20,6 +22,9 @@ public class Box {
   public void move() {
     b-=50;
     a=0;
+    
+    OldBox old=new OldBox(a,b);
+    old.setup();
   }
 
 
